@@ -9,15 +9,16 @@
 <body>
     <main>
         <h3>Alarme</h3>
+
         <div class="row">
             <div class="col">
                 <h3>01:00</h3>
                 <p>Uma vez</p>
             </div>
             <div class="button">
-                <input type="checkbox" id="slider">
+                <input type="checkbox" id="slider1">
 
-                <label for="slider" class="switch">
+                <label for="slider1" class="switch">
                     <span class="slider"></span>
                 </label>
             </div>   
@@ -29,9 +30,9 @@
                 <p>Uma vez</p>
             </div>
             <div class="button">
-                <input type="checkbox" id="slider">
+                <input type="checkbox" id="slider2">
 
-                <label for="slider" class="switch">
+                <label for="slider2" class="switch">
                     <span class="slider"></span>
                 </label>
             </div>   
@@ -90,7 +91,7 @@
             opacity: 1;
             cursor: pointer;
         }
-        #slider{
+        #slider1, #slider2{
             display: none;
         }
         .switch{
@@ -116,13 +117,22 @@
         }
 
         /* efeitos */
-        #slider:checked ~ .switch{
+        #slider1:checked ~ .switch{
             background-color: blue;
         }
 
-        #slider:checked ~ .switch .slider{
+        #slider2:checked ~ .switch{
+            background-color: blue;
+        }
+
+        #slider1:checked ~ .switch .slider{
             transform: translateX(60px);
         }
+
+        #slider2:checked ~ .switch .slider{
+            transform: translateX(60px);
+        }
+
         #add{
             font-size: 50px;
             width: 70px;
@@ -138,10 +148,12 @@
             bottom: 100px;
             right: 400px;
         }
+
         #add:hover{
             color: green;
             transform: scale(1.12);
         }
+        
         footer{
             margin: 10px;
             width: 400px;
